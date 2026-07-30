@@ -345,6 +345,7 @@ PROJECTS_DATA = [
         "card_image": "assets/images/ppnavigator.svg",
         "cover_image": "assets/images/ppnavigator.svg",
         "description": "Entwicklung einer interaktiven Restaurant-Empfehlungsplattform mit Streamlit. Die Anwendung kombiniert personalisierte Filter, ein gewichtetes Empfehlungssystem und eine Kartenintegration für eine intuitive Nutzererfahrung.",
+        "demo_url": "https://platpilotnavigatorapp.streamlit.app/",
         "tags": ["Python", "Streamlit", "Pandas", "Scikit-learn", "NumPy", "Folium", "GeoPy", "Parquet"],
 
         "gallery": [
@@ -532,6 +533,14 @@ def project_dialog(project: dict) -> None:
         </div>
         """
     )
+
+    if project.get("demo_url"):
+        st.link_button(
+            "🚀 PlatePilot App öffnen",
+            project["demo_url"],
+            use_container_width=False,
+        )
+
 
     # Footer: zwischen Projekten wechseln
     st.html('<div class="case-project-footer-divider"></div>')

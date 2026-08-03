@@ -979,7 +979,9 @@ st.html(
     <footer>
         <div>
             <strong>YP · YANA PFALZGRAF</strong>
-            <p>Data Analystin mit UX-Hintergrund.</p>
+            <p>Data Analystin mit UX-Hintergrund |
+            <a href="https://canva.link/0cbpgfioj5zewby" target="_blank" rel="noopener noreferrer">Zeugnisse</a>
+            &middot; </p>
         </div>
         <div>
             <strong>KONTAKT</strong>

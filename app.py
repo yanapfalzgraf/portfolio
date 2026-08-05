@@ -373,6 +373,7 @@ PROJECTS_DATA = [
 
         "gallery": [
         "assets/images/olympic_dashboard.svg",
+        "assets/images/2_seite_olympic_dashboard.svg"
         ],
     },
 ]

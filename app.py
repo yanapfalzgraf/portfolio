@@ -3,7 +3,6 @@ import html
 import streamlit as st
 import base64
 import mimetypes
-import textwrap
 
 from chatbot import (
     contact_form_dialog,
@@ -984,67 +983,44 @@ render_floating_chat(
 )
 
 
-st.markdown(
-    textwrap.dedent(
-        """
-        <footer>
-        <div class="footer-intro">
-            <strong>YANA PFALZGRAF</strong>
+footer_html = """
+<footer>
+    <div class="footer-intro">
+        <strong>YANA PFALZGRAF</strong>
+        <p>
+            Data Analystin mit UX-Hintergrund.<br>
+            Daten, Mensch und Produkt zusammengedacht.
+        </p>
+    </div>
 
-            <p>
-                Data Analystin mit UX-Hintergrund.<br>
-                Daten, Mensch und Produkt zusammengedacht.
-            </p>
-        </div>
+    <div class="footer-links">
+        <strong>LINKS</strong>
+        <p>
+            <a href="https://www.linkedin.com/in/yana-pfalzgraf-610669136/"
+               target="_blank"
+               rel="noopener noreferrer">LinkedIn</a><br>
 
-        <div class="footer-links">
-            <strong>LINKS</strong>
+            <a href="https://www.xing.com/profile/Yana_Pfalzgraf"
+               target="_blank"
+               rel="noopener noreferrer">XING</a><br>
 
-            <p>
-                <a
-                    href="https://www.linkedin.com/in/yana-pfalzgraf-610669136/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
+            <a href="https://github.com/yanapfalzgraf"
+               target="_blank"
+               rel="noopener noreferrer">GitHub</a>
+        </p>
+    </div>
 
-                <br>
+    <div class="footer-contact">
+        <strong>KONTAKT</strong>
+        <p>
+            Offen für Austausch, neue Herausforderungen
+            und Rollen im Bereich Data Analytics.
+        </p>
+        <a class="footer-contact-link" href="#contact">
+            Kontakt aufnehmen →
+        </a>
+    </div>
+</footer>
+"""
 
-                <a
-                    href="https://www.xing.com/profile/Yana_Pfalzgraf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    XING
-                </a>
-
-                <br>
-
-                <a
-                    href="https://github.com/yanapfalzgraf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
-            </p>
-        </div>
-
-        <div class="footer-contact">
-            <strong>KONTAKT</strong>
-
-            <p>
-                Offen für Austausch, neue Herausforderungen
-                und Rollen im Bereich Data Analytics.
-            </p>
-
-            <a class="footer-contact-link" href="#contact">
-                Kontakt aufnehmen →
-            </a>
-        </div>
-        </footer>
-        """
-    ),
-    unsafe_allow_html=True,
-)
+st.html(footer_html)

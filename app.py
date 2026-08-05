@@ -320,22 +320,30 @@ PROJECTS_UX = [
 PROJECTS_DATA = [
     {
         "title": "Projekt 01 · Autoscout 24",
-        "subtitle": "Data Analytics · Power BI · DAX · Python ",
+        "subtitle": "Data Analytics · Power BI · DAX · Python",
         "image": "assets/images/data_prediction.svg",
         "card_image": "assets/images/dsi1.svg",
         "cover_image": "assets/images/dsi1.svg",
-        "description": "Entwicklung eines interaktiven Power BI Dashboards zur Analyse von Fahrzeugdaten aus AutoScout24 mit Fokus auf Markttrends, Preisentwicklung und datenbasierte Entscheidungsunterstützung.",
-        "tags": ["Power BI", "Data Analytics", "Dashboard Design", "DAX", "Python", "Power Query", "ML"],
-
-        
+        "description": (
+           "AutoScout24-Datensatz · Analyse des Gebrauchtwagenmarktes · Preisentwicklung nach Baujahr · Marken- und Modellvergleich · Auswertung von Laufleistung, Leistung und Kraftstoffarten · Interaktive Filter und KPIs · DAX Measures · Power Query · Star Schema · Dashboard zur datengetriebenen Fahrzeuganalyse."
+        ),
+        "tags": [
+            "Power BI",
+            "Data Analytics",
+            "Dashboard Design",
+            "DAX",
+            "Python",
+            "Power Query",
+            "ML",
+        ],
         "gallery": [
-        "assets/images/dsi1.svg",
-        "assets/images/dsi2.svg",
-        "assets/images/dsi3.svg",
-        "assets/images/dsi4.svg",
-        "assets/images/dsi5.svg",
-        "assets/images/dsi6.svg",
-        "assets/images/dsi7.svg",
+            "assets/images/dsi1.svg",
+            "assets/images/dsi2.svg",
+            "assets/images/dsi3.svg",
+            "assets/images/dsi4.svg",
+            "assets/images/dsi5.svg",
+            "assets/images/dsi6.svg",
+            "assets/images/dsi7.svg",
         ],
     },
     {
@@ -344,7 +352,7 @@ PROJECTS_DATA = [
         "image": "assets/images/data_forecasting.svg",
         "card_image": "assets/images/ppnavigator.svg",
         "cover_image": "assets/images/ppnavigator.svg",
-        "description": "Entwicklung einer interaktiven Restaurant-Empfehlungsplattform mit Streamlit. Die Anwendung kombiniert personalisierte Filter, ein gewichtetes Empfehlungssystem und eine Kartenintegration für eine intuitive Nutzererfahrung.",
+        "description": "Restaurant-Empfehlungsplattform · Personalisierte Filter · Gewichtetes Empfehlungssystem · Kartenintegration · Interaktive Datenvisualisierung · Restaurantsuche · Standortbasierte Empfehlungen · Streamlit · Python · Benutzerfreundliche Navigation · Datenanalyse · API-Integration",
         "demo_url": "https://platpilotnavigatorapp.streamlit.app/",
         "tags": ["Python", "Streamlit", "Pandas", "Scikit-learn", "NumPy", "Folium", "GeoPy", "Parquet"],
 
@@ -359,7 +367,9 @@ PROJECTS_DATA = [
         "image": "assets/images/data_insights.svg",
         "card_image": "assets/images/dsi.svg",
         "cover_image": "assets/images/dsi.svg",
-        "description": "Analyse und Visualisierung olympischer Daten in Power BI zur Identifikation historischer Trends und zum Vergleich von Ländern, Sportarten und Medaillenerfolgen.",
+        "description": (
+    "Olympische Datenanalyse · Star Schema · Power BI · DAX Measures · Dimensionen & Faktentabelle · Länderdominanz · Frauen-/Männer-Teilnahme · Historische Entwicklungen · Sportartenwachstum · Participation Rate · Gender Gap · Female-to-Male Ratio · Trendanalysen"
+),
         "tags": ["Power BI", "Data Visualization", "DAX", "Power Query"],
 
         "gallery": [
@@ -994,7 +1004,7 @@ st.html(
             &middot;
             <a href="https://www.xing.com/profile/Yana_Pfalzgraf/web_profiles?nwt_nav=profile_icon">XING</a>
             &middot;
-            <a href="https://github.com/yanapfalzgraf/platpilotnavigator">GitHub</a>
+            <a href="hhttps://github.com/yanapfalzgraf">GitHub</a>
         </p>
 </div>
     </footer>

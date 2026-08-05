@@ -1,3 +1,126 @@
+ChatGPT Plus
+
+
+
+
+
+6fd05f9a-4245-4e46-85dc-2fb8d5262b2a.png
+970f5200-8970-49cd-9aae-42c40a882190.png
+f9fe0e54-27ab-4cde-8b4c-92591758aa27.png
+9f5229f1-d1b1-46a5-93bf-3cc615fe27e8.png
+habe ich in dem dashboar alles von 3 screens gezeigt oder fehlt was?
+
+ChatGPT Image 5. Aug. 2026, 13_50_44(1).png
+kannst du am beispiel von 1 seite, 2 seite erstellen? hast du ja daten jetzt
+
+ChatGPT Image 5. Aug. 2026, 13_50_44(2).png
+bitte 2 seite im gleichen design als svg erstellen 
+
+e41d0fa2-b995-4379-a17e-15c459386e33.png
+was ist das?
+
+
+app(21).py
+Python
+
+Ja, aber dafür brauche ich die Datei app.py oder mindestens den Bereich ungefähr Zeile 930–990.
+
+Aktuell ist nur der Screenshot verfügbar, nicht der Quellcode. Auf dem Screenshot sieht man lediglich, dass der Aufruf in Zeile 977 passiert:
+
+contact_form_dialog()
+Sehr wahrscheinlich werden in einem einzigen Streamlit-Durchlauf zwei Dialoge geöffnet. Typisch ist so etwas:
+
+if st.button("Kontakt"):
+    contact_form_dialog()
+
+# später im Code
+if andere_bedingung:
+    anderer_dialog()
+Oder der Dialog wird ohne Button-Bedingung direkt ausgeführt:
+
+contact_form_dialog()  # wird bei jedem Rerun geöffnet
+Lade bitte app.py hoch. Dann prüfe ich die genaue Ursache und gebe dir den korrigierten Code zurück.
+
+
+
+app(22).py
+Python
+
+Ja. Ich habe mir den hochgeladenen Code angesehen.
+
+Der Fehler liegt nicht im project_dialog. Der sieht sauber aus.
+
+Der eigentliche Hinweis steckt hier:
+
+from chatbot import (
+    contact_form_dialog,
+    init_chat_state,
+    render_floating_chat,
+)
+Du importierst contact_form_dialog() aus chatbot.py. 
+
+
+Der Stacktrace zeigt außerdem:
+
+app.py line 977
+contact_form_dialog()
+Das bedeutet:
+
+app.py ruft den Dialog auf.
+
+Der eigentliche Fehler entsteht aber innerhalb des Dialog-Mechanismus (chatbot.py), nicht im Projektdialog.
+
+Ich vermute den Fehler
+Du verwendest wahrscheinlich so etwas:
+
+@st.dialog("Kontakt")
+def contact_form_dialog():
+    ...
+und rufst später einfach
+
+contact_form_dialog()
+auf, obwohl bereits ein anderer Dialog geöffnet ist (z. B. dein project_dialog).
+
+Streamlit erlaubt immer nur einen geöffneten Dialog gleichzeitig.
+
+Deshalb erscheint
+
+StreamlitAPIException
+_assert_first_dialog_to_be_opened
+Was ich brauche
+Bitte lade noch chatbot.py hoch.
+
+Dort befinden sich sehr wahrscheinlich:
+
+@st.dialog
+
+contact_form_dialog()
+
+render_floating_chat()
+
+Ich kann dir dann die exakte Zeile nennen, die den Fehler verursacht, und dir den korrigierten Code schreiben. Im Moment fehlt genau diese Datei – dort liegt die eigentliche Ursache.
+
+
+kannst du überschreiben so dass es funktioniert?
+
+Ja. Ich habe die Datei so angepasst, dass Projekt-Dialog, Kontaktformular und schwebender Chat nicht mehr gleichzeitig geöffnet werden. Außerdem wird beim Öffnen des Kontaktformulars ein eventuell aktiver Projekt-Dialog geschlossen.
+
+Die Datei wurde auch auf Python-Syntax geprüft.
+
+app_fixed.py
+
+Ersetze deine bisherige app.py durch diese Datei beziehungsweise benenne sie in app.py um.
+
+
+app_fixed.py
+Code
+
+
+Bibliothek
+/
+app_fixed.py
+
+
 from pathlib import Path
 import html
 import streamlit as st
@@ -56,7 +179,12 @@ init_chat_state()
 
 
 def open_contact_form() -> None:
-    """Öffnet ausschließlich das Kontaktformular."""
+    """Öffnet ausschließlich das Kontaktformular.
+
+    Streamlit erlaubt pro Skriptlauf nur einen Dialog. Deshalb wird ein
+    eventuell geöffnetes Projekt zuerst geschlossen.
+    """
+    st.session_state["active_project_index"] = None
     st.session_state["contact_form_open"] = True
 
 
@@ -648,6 +776,8 @@ def project_card(project: dict) -> None:
             key=f"open_project_{project['title']}",
             use_container_width=True,
         ):
+            # Es darf pro Streamlit-Lauf nur ein Dialog geöffnet werden.
+            st.session_state["contact_form_open"] = False
             st.session_state["active_project_index"] = ALL_PROJECTS.index(project)
             st.rerun()
 
@@ -932,9 +1062,17 @@ with st.container(key="ux_project_carousel"):
             f'<div class="carousel-dots" aria-label="Carousel-Position">{dots}</div>'
         )
 
-# Der Dialog wird nur auf Top-Level geöffnet.
-# Dadurch können Projekte gewechselt werden, ohne Dialoge zu verschachteln.
+# Dialogstatus zentral auswerten. Streamlit erlaubt pro Skriptlauf nur
+# einen geöffneten Dialog. Projekt- und Kontakt-Dialog sind daher exklusiv.
 active_project_index = st.session_state.get("active_project_index")
+contact_form_is_open = st.session_state.get("contact_form_open", False)
+
+# Falls durch einen alten Session-State beide Werte gesetzt sind, hat das
+# Kontaktformular Vorrang und der Projektstatus wird bereinigt.
+if contact_form_is_open and active_project_index is not None:
+    st.session_state["active_project_index"] = None
+    active_project_index = None
+
 if active_project_index is not None:
     project_dialog(ALL_PROJECTS[active_project_index])
 
@@ -972,16 +1110,22 @@ with st.container(key="contact_banner"):
         )
         st.caption("Öffnet das Kontaktformular.")
 
-# Kontaktformular und Chatbot bleiben vollständig voneinander getrennt.
-if st.session_state.get("contact_form_open", False):
+# Nur einen Dialog pro Skriptlauf öffnen. Durch das if/elif kann das
+# Kontaktformular nicht gleichzeitig mit dem Projekt-Dialog erscheinen.
+contact_form_is_open = st.session_state.get("contact_form_open", False)
+active_project_index = st.session_state.get("active_project_index")
+
+if contact_form_is_open and active_project_index is None:
     contact_form_dialog(
         portrait_data_url=f"data:image/jpeg;base64,{portrait_base64}"
     )
-
-# Der Portfolio-Chat ist als schwebendes, beim Scrollen sichtbares Element verfügbar.
-render_floating_chat(
-    portrait_data_url=f"data:image/jpeg;base64,{portrait_base64}"
-)
+elif active_project_index is None:
+    # Den schwebenden Chat nur rendern, wenn kein anderer Dialog aktiv ist.
+    # Falls render_floating_chat intern ebenfalls st.dialog verwendet, wird
+    # dadurch die StreamlitAPIException zuverlässig verhindert.
+    render_floating_chat(
+        portrait_data_url=f"data:image/jpeg;base64,{portrait_base64}"
+    )
 
 
 footer_html = """

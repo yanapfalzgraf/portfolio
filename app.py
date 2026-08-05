@@ -1004,7 +1004,7 @@ st.html(
             &middot;
             <a href="https://www.xing.com/profile/Yana_Pfalzgraf/web_profiles?nwt_nav=profile_icon">XING</a>
             &middot;
-            <a href="hhttps://github.com/yanapfalzgraf">GitHub</a>
+            <a href="https://github.com/yanapfalzgraf">GitHub</a>
         </p>
 </div>
     </footer>

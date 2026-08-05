@@ -246,8 +246,7 @@ st.markdown(
     }
 
     </style>
-    """,
-    unsafe_allow_html=True,
+    """
 )
 
 PROJECTS_UX = [
@@ -984,7 +983,7 @@ render_floating_chat(
 )
 
 
-st.markdown(
+st.html(
     """
     <footer>
         <div class="footer-intro">

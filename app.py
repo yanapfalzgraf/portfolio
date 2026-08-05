@@ -372,7 +372,7 @@ PROJECTS_DATA = [
         "tags": ["Power BI", "Data Visualization", "DAX", "Power Query"],
 
         "gallery": [
-        "assets/images/dsi.svg",
+        "assets/images/olympic_dashboard.svg",
         ],
     },
 ]
@@ -989,7 +989,7 @@ footer_html = """
         <strong>YANA PFALZGRAF</strong>
         <p>
             Data Analystin mit UX-Hintergrund.<br>
-            Daten, Mensch und Produkt zusammengedacht.</br>
+            Daten, Mensch und Produkt zusammengedacht. </br>
 
             Offen für Austausch, neue Herausforderungen
             und Rollen </br> im Bereich Data Analytics.
@@ -1001,7 +1001,7 @@ footer_html = """
         <p>
             <a href="https://www.linkedin.com/in/yana-pfalzgraf-610669136/"
                target="_blank"
-               rel="noopener noreferrer">LinkedIn |</a>
+               rel="noopener noreferrer">LinkedIn | </a>
 
             <a href="https://www.xing.com/profile/Yana_Pfalzgraf"
                target="_blank"
@@ -1017,7 +1017,7 @@ footer_html = """
         <strong>KONTAKT</strong>
         <p>
             Yana Pfalzgraf </br>
-            Falkenstrasse 37 </br>
+            Falkenstrasse 37</br>
             74405 Gaildorf</br>
             0176-32958972</br>
             yanapfalzgraf@googlemail.com

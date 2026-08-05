@@ -1001,11 +1001,11 @@ footer_html = """
         <p>
             <a href="https://www.linkedin.com/in/yana-pfalzgraf-610669136/"
                target="_blank"
-               rel="noopener noreferrer">LinkedIn</a><br>
+               rel="noopener noreferrer">LinkedIn |</a>
 
             <a href="https://www.xing.com/profile/Yana_Pfalzgraf"
                target="_blank"
-               rel="noopener noreferrer">XING</a><br>
+               rel="noopener noreferrer">XING |</a>
 
             <a href="https://github.com/yanapfalzgraf"
                target="_blank"

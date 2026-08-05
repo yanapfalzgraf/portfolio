@@ -364,8 +364,8 @@ PROJECTS_DATA = [
         "title": "Projekt 03 · Olympische Spiele",
         "subtitle": "Data Analytics · Power BI · DAX · Python",
         "image": "assets/images/olympic_dashboard.svg",
-        "card_image": "assets/images/dsi.svg",
-        "cover_image": "assets/images/dsi.svg",
+        "card_image": "assets/images/olympic_dashboard.svg",
+        "cover_image": "assets/images/olympic_dashboard.svg",
         "description": (
     "Olympische Datenanalyse · Star Schema · Power BI · DAX Measures · Dimensionen & Faktentabelle · Länderdominanz · Frauen-/Männer-Teilnahme · Historische Entwicklungen · Sportartenwachstum · Participation Rate · Gender Gap · Female-to-Male Ratio · Trendanalysen"
 ),

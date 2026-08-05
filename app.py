@@ -349,14 +349,14 @@ PROJECTS_DATA = [
         "title": "Projekt 02 · PlatePilot Navigator App",
         "subtitle": "Empfehlungssystem · Scoring-Modell · Streamlit · Python",
         "image": "assets/images/data_forecasting.svg",
-        "card_image": "assets/images/ppnavigator.svg",
-        "cover_image": "assets/images/ppnavigator.svg",
+        "card_image": "assets/images/platepilot_navigator_cover.svg",
+        "cover_image": "assets/images/platepilot_navigator_cover.svg",
         "description": "Restaurant-Empfehlungsplattform · Personalisierte Filter · Gewichtetes Empfehlungssystem · Kartenintegration · Interaktive Datenvisualisierung · Restaurantsuche · Standortbasierte Empfehlungen · Streamlit · Python · Benutzerfreundliche Navigation · Datenanalyse · API-Integration",
         "demo_url": "https://platpilotnavigatorapp.streamlit.app/",
         "tags": ["Python", "Streamlit", "Pandas", "Scikit-learn", "NumPy", "Folium", "GeoPy", "Parquet"],
 
         "gallery": [
-        "assets/images/ppnavigator.svg",
+        "assets/images/platepilot_navigator_cover.svg",
         "assets/images/ppnavigator2.svg",
         ],
     },

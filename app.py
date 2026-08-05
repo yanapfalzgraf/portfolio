@@ -363,7 +363,7 @@ PROJECTS_DATA = [
     {
         "title": "Projekt 03 · Olympische Spiele",
         "subtitle": "Data Analytics · Power BI · DAX · Python",
-        "image": "assets/images/data_insights.svg",
+        "image": "assets/images/olympic_dashboard.svg",
         "card_image": "assets/images/dsi.svg",
         "cover_image": "assets/images/dsi.svg",
         "description": (

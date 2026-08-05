@@ -712,7 +712,7 @@ div[data-testid="stDialog"] button[data-testid="baseButton-secondary"] * {
 
 footer {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     padding: 2.5rem 0 1rem;
     border-top: 1px solid var(--line);

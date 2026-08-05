@@ -294,7 +294,7 @@ PROJECTS_UX = [
 
         "gallery": [
         "assets/images/meapuna.svg",
-        "assets/images/meaouna.svg",
+        "assets/images/meapuna.svg",
         "assets/images/meapuna2.svg",
         "assets/images/meapuna3.svg",
         ],

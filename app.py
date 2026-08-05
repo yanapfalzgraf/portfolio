@@ -1016,10 +1016,10 @@ footer_html = """
     <div class="footer-contact">
         <strong>KONTAKT</strong>
         <p>
-            Yana Pfalzgraf
-            Falkenstrasse 37
-            74405 Gaildorf
-            0176-32958972
+            Yana Pfalzgraf </br>
+            Falkenstrasse 37 </br>
+            74405 Gaildorf</br>
+            0176-32958972</br>
             yanapfalzgraf@googlemail.com
         </p>
     </div>

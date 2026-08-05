@@ -960,7 +960,13 @@ Diese Klasse ist stabiler als ein aria-label-Selektor.
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    pointer-events: none !important;
 }
+
+.st-key-floating_portfolio_chat button {
+    pointer-events: auto !important;
+}
+
 
 /* Streamlit-Wrapper nicht auf volle Seitenbreite ziehen */
 .st-key-floating_portfolio_chat,

@@ -989,7 +989,7 @@ footer_html = """
         <strong>YANA PFALZGRAF</strong>
         <p>
             Data Analystin mit UX-Hintergrund.<br>
-            Daten, Mensch und Produkt zusammengedacht.
+            Daten, Mensch und Produkt zusammengedacht.</br>
 
             Offen für Austausch, neue Herausforderungen
             und Rollen im Bereich Data Analytics.

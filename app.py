@@ -984,42 +984,65 @@ render_floating_chat(
 )
 
 
-st.html(
+st.markdown(
     """
-  <footer>
-    <div>
-        <strong>LINKS</strong>
+    <footer>
+        <div class="footer-intro">
+            <strong>YANA PFALZGRAF</strong>
 
-        <p>
-            <a
-                href="https://www.linkedin.com/in/yana-pfalzgraf-610669136/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LinkedIn
+            <p>
+                Data Analystin mit UX-Hintergrund.<br>
+                Daten, Mensch und Produkt zusammengedacht.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <strong>LINKS</strong>
+
+            <p>
+                <a
+                    href="https://www.linkedin.com/in/yana-pfalzgraf-610669136/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <br>
+
+                <a
+                    href="https://www.xing.com/profile/Yana_Pfalzgraf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    XING
+                </a>
+
+                <br>
+
+                <a
+                    href="https://github.com/yanapfalzgraf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </p>
+        </div>
+
+        <div class="footer-contact">
+            <strong>KONTAKT</strong>
+
+            <p>
+                Offen für Austausch, neue Herausforderungen
+                und Rollen im Bereich Data Analytics.
+            </p>
+
+            <a class="footer-contact-link" href="#contact">
+                Kontakt aufnehmen →
             </a>
-
-            &middot;
-
-            <a
-                href="https://www.xing.com/profile/Yana_Pfalzgraf"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                XING
-            </a>
-
-            &middot;
-
-            <a
-                href="https://github.com/yanapfalzgraf"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-        </p>
-    </div>
-</footer>
-    """
+        </div>
+    </footer>
+    """,
+    unsafe_allow_html=True,
 )

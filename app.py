@@ -963,7 +963,7 @@ with st.container(key="contact_banner"):
 
     with contact_action:
         st.button(
-            "Zum Formular →",
+            "Kontakt aufnehmen →",
             key="open_portfolio_chat_button",
             type="primary",
             use_container_width=True,
@@ -990,6 +990,9 @@ footer_html = """
         <p>
             Data Analystin mit UX-Hintergrund.<br>
             Daten, Mensch und Produkt zusammengedacht.
+
+            Offen für Austausch, neue Herausforderungen
+            und Rollen im Bereich Data Analytics.
         </p>
     </div>
 
@@ -1013,12 +1016,12 @@ footer_html = """
     <div class="footer-contact">
         <strong>KONTAKT</strong>
         <p>
-            Offen für Austausch, neue Herausforderungen
-            und Rollen im Bereich Data Analytics.
+            Yana Pfalzgraf
+            Falkenstrasse 37
+            74405 Gaildorf
+            0176-32958972
+            yanapfalzgraf@googlemail.com
         </p>
-        <a class="footer-contact-link" href="#contact">
-            Kontakt aufnehmen →
-        </a>
     </div>
 </footer>
 """

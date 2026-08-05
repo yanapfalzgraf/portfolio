@@ -87,7 +87,7 @@ button[kind="primary"]:disabled * {
 .site-header {
     min-height: 78px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 2rem;
     position: sticky;

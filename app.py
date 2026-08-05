@@ -992,7 +992,7 @@ footer_html = """
             Daten, Mensch und Produkt zusammengedacht.</br>
 
             Offen für Austausch, neue Herausforderungen
-            und Rollen im Bereich Data Analytics.
+            und Rollen </br> im Bereich Data Analytics.
         </p>
     </div>
 

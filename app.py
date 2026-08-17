@@ -361,8 +361,8 @@ PROJECTS_DATA = [
         "tags": ["Python", "Streamlit", "Pandas", "Scikit-learn", "NumPy", "Folium", "GeoPy", "Parquet"],
 
         "gallery": [
-        "assets/images/platepilot_navigator_cover.svg",
-        "assets/images/ppnavigator2.svg",
+        "assets/images/ppnavigator_new.svg",
+        "assets/images/ppnavigator_new_2.svg",
         ],
     },
     {

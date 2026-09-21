@@ -256,22 +256,19 @@ h1 span {
 
 .hand-note {
     position: relative;
+    left: 50px;   /* nach rechts */
 
     color: var(--green);
-
     font-family: "Caveat", cursive;
-
     font-size: 22px;
-
     line-height: 1.15;
-
     transform: rotate(-5deg);
 }
 
 .note-arrow {
     position: absolute;
 
-    left: -75px;
+    left: -55px;
     top: 7px;
 
     font-family: "DM Sans", sans-serif;

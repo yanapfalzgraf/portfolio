@@ -530,6 +530,20 @@ h1 span {
     line-height: 1.55;
 }
 
+/* Separator zwischen den Blöcken */
+.principle + .principle::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+
+    width: 1px;
+    background: #d5dcda;
+}
+
 
 
 /* ------------------------------

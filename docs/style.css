@@ -112,22 +112,16 @@ body {
 ------------------------------ */
 
 .hero {
-    width: calc(100% - 14vw);
-    max-width: 1370px;
-
+    width: calc(100% - 10vw);
+    max-width: 1400px;
     margin: 0 auto;
 
-    min-height: 620px;
+    padding-top: 55px;   /* NEU */
 
     display: grid;
-
-    grid-template-columns:
-        minmax(520px, 1.15fr)
-        minmax(500px, 0.85fr);
-
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 45px;
     align-items: center;
-
-    gap: 35px;
 }
 
 .hero-focus {
@@ -295,11 +289,10 @@ h1 span {
 .visual {
     position: relative;
 
-    min-height: 590px;
+    width: 620px;
+    height: 570px;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    justify-self: start;
 }
 
 .background-shape {
@@ -413,17 +406,20 @@ h1 span {
 /* Later used by the real image */
 
 .hero-image {
-    position: relative;
-    z-index: 2;
+    position: absolute;
 
-    width: 500px;
-    height: 560px;
+    width: 445px;
+    height: 535px;
+
+    left: 80px;
+    top: 0;
 
     object-fit: cover;
     object-position: center;
 
-    border-radius:
-        250px 250px 85px 85px;
+    border-radius: 230px 230px 75px 75px;
+
+    z-index: 2;
 }
 
 

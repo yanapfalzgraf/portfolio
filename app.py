@@ -11,7 +11,7 @@ from chatbot import (
 )
 
 BASE_DIR = Path(__file__).parent
-PORTRAIT_PATH = BASE_DIR / "assets" / "images" / "yp_image.img"
+PORTRAIT_PATH = BASE_DIR / "assets" / "images" / "yp_image.jpg"
 def get_image_data_url(relative_path: str) -> str:
     image_path = BASE_DIR / relative_path
 

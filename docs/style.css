@@ -79,19 +79,20 @@ body {
     color: var(--green);
 }
 
-.name,
+.name {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #172326;
+}
+
 .areas {
     font-size: 11px;
-
     letter-spacing: 4px;
-
     font-weight: 500;
-}
-
-.areas {
     color: #45585d;
 }
-
 
 /* ------------------------------
    HERO

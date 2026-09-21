@@ -66,32 +66,45 @@ body {
 .brand {
     display: flex;
     align-items: center;
-
-    gap: 14px;
+    gap: 16px;
 }
 
 .logo {
     font-family: "Playfair Display", serif;
-
     font-size: 31px;
     font-weight: 700;
-
     color: var(--green);
+    line-height: 1;
 }
 
 .name {
     font-family: "DM Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0;
-    color: #172326;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--heading);
+    white-space: nowrap;
 }
 
-.areas {
-    font-size: 11px;
-    letter-spacing: 4px;
+.brand-divider {
+    width: 1px;
+    height: 18px;
+    background: #c7cfcc;
+    margin: 0 5px;
+}
+
+.brand-focus {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
     font-weight: 500;
-    color: #45585d;
+    letter-spacing: 2px;
+    color: #71807c;
+    white-space: nowrap;
+}
+
+.brand-focus span {
+    color: var(--green);
+    margin: 0 3px;
 }
 
 /* ------------------------------

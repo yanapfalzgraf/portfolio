@@ -424,31 +424,35 @@ h1 span {
 
 .keywords {
     position: absolute;
+    z-index: 4;
 
-    z-index: 3;
+    /* rechts neben dem Bild */
+    left: 510px;
+    top: 345px;
 
-    left: 600px;
-    top: 160px;
-
-    color: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     font-family: "Caveat", cursive;
     font-size: 29px;
-    line-height: 1.45;
+    font-weight: 500;
+    line-height: 1.35;
 
-    transform: rotate(-4deg);
+    color: #0d6757;
 
+    transform: rotate(-3deg);
     white-space: nowrap;
 }
 
 .keyword-line {
-    width: 90px;
+    width: 85px;
 
     height: 1px;
 
-    margin-top: 12px;
-
-    background: var(--green);
+    margin-top: 9px;
+     margin-left: 10px;
+    background: #0d6757;
 
     transform: rotate(-8deg);
 }
@@ -459,26 +463,27 @@ h1 span {
 ------------------------------ */
 
 .principles {
-    width: calc(100% - 12vw);
-    max-width: 1450px;
+    width: calc(100% - 10vw);
+    max-width: 1400px;
 
-    margin-top: 35px;
+    margin: 30px auto 0;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
+
+    align-items: stretch;
 }
 
-.principle {
-    min-height: 110px;
+.principles {
+    width: calc(100% - 10vw);
+    max-width: 1400px;
 
-    padding: 8px 34px;
+    margin: 30px auto 0;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-    gap: 22px;
-
-    border-right: 1px solid var(--line);
+    align-items: stretch;
 }
 
 .principle:last-child {
@@ -523,6 +528,14 @@ h1 span {
     font-size: 13px;
 
     line-height: 1.55;
+}
+
+.principle:first-child {
+    padding-left: 0;
+}
+
+.principle:last-child {
+    padding-right: 0;
 }
 
 

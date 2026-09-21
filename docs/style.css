@@ -427,7 +427,7 @@ h1 span {
     z-index: 4;
 
     /* rechts neben dem Bild */
-    left: 510px;
+    left: 540px;
     top: 345px;
 
     display: flex;
@@ -530,13 +530,6 @@ h1 span {
     line-height: 1.55;
 }
 
-.principle:first-child {
-    padding-left: 0;
-}
-
-.principle:last-child {
-    padding-right: 0;
-}
 
 
 /* ------------------------------

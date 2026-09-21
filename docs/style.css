@@ -464,7 +464,7 @@ h1 span {
     width: calc(100% - 12vw);
     max-width: 1450px;
 
-    margin: 0 auto 45px;
+    margin-top: 35px;
 
     display: grid;
 
@@ -536,7 +536,7 @@ h1 span {
     width: calc(100% - 10vw);
     max-width: 1500px;
 
-    margin: 0 auto;
+    margin-buttom: 35px;
 
     padding: 0 0 28px;
 

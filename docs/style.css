@@ -279,37 +279,7 @@ h1 span {
 }
 
 
-/* ------------------------------
-   HERO RIGHT
------------------------------- */
 
-.visual {
-    position: relative;
-
-    width: 620px;
-    height: 570px;
-
-    justify-self: start;
-}
-
-.background-shape {
-    position: absolute;
-    z-index: 1;
-
-    width: 330px;
-    height: 440px;
-
-    left: -25px;
-    top: 55px;
-
-    background: #e8f0eb;
-
-    border-radius:
-        58% 42% 52% 48% /
-        48% 55% 45% 52%;
-
-    transform: rotate(-8deg);
-}
 
 
 /* ------------------------------
@@ -424,7 +394,7 @@ h1 span {
 
 .keywords {
     position: absolute;
-    z-index: 4;
+    z-index: 3;
 
     /* rechts neben dem Bild */
     left: 540px;
@@ -457,6 +427,37 @@ h1 span {
     transform: rotate(-8deg);
 }
 
+/* ------------------------------
+   HERO RIGHT
+------------------------------ */
+
+.visual {
+    position: relative;
+
+    width: 620px;
+    height: 570px;
+
+    justify-self: start;
+}
+
+.background-shape {
+    position: absolute;
+    z-index: 1;
+
+    width: 330px;
+    height: 440px;
+
+    left: -25px;
+    top: 55px;
+
+    background: #e8f0eb;
+
+    border-radius:
+        58% 42% 52% 48% /
+        48% 55% 45% 52%;
+
+    transform: rotate(-8deg);
+}
 
 /* ------------------------------
    PRINCIPLES
